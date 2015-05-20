@@ -10,6 +10,10 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 @Mod(modid="TritMod", name="Trit Mod", version="1.7.10-1.0")
 public class TritMod 
 {
+	
+	@Mod.Instance("TritMod")
+	public static TritMod instance;
+	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
@@ -23,7 +27,7 @@ public class TritMod
 	}
 	
 	@Mod.EventHandler
-	public void init(FMLPostInitializationEvent event)
+	public void postinit(FMLPostInitializationEvent event)
 	{
 		
 	}
