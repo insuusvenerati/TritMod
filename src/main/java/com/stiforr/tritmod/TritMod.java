@@ -1,10 +1,12 @@
 package com.stiforr.tritmod;
 
 import com.stiforr.tritmod.handler.ConfigHandler;
+import com.stiforr.tritmod.init.ModItems;
 import com.stiforr.tritmod.proxy.IProxy;
 import com.stiforr.tritmod.reference.Reference;
 import com.stiforr.tritmod.utility.LogHelper;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -23,11 +25,16 @@ public class TritMod
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static IProxy proxy;
 	
+	// Starting Init stuff
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
-	{
+	{	
+		// Create and load config file
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigHandler());
 		LogHelper.info("Pre Init Complete");
+		// Register items
+		ModItems.init();
 	}
 	
 	@Mod.EventHandler
