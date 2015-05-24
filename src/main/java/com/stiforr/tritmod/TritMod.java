@@ -1,6 +1,7 @@
 package com.stiforr.tritmod;
 
 import com.stiforr.tritmod.handler.ConfigHandler;
+import com.stiforr.tritmod.init.ModBlocks;
 import com.stiforr.tritmod.init.ModItems;
 import com.stiforr.tritmod.proxy.IProxy;
 import com.stiforr.tritmod.reference.Reference;
@@ -35,6 +36,8 @@ public class TritMod
 		LogHelper.info("Pre Init Complete");
 		// Register items
 		ModItems.init();
+		// Register blocks
+		ModBlocks.init();
 	}
 	
 	@Mod.EventHandler

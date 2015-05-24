@@ -11,12 +11,13 @@ public class ItemTritLeaf extends ItemTrit
 	{
 		super();
 		this.setUnlocalizedName("tritLeaf");
+		this.maxStackSize = 64;
 		
 	}
 	
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4)
 	{
-		list.add("Make some leaf soup!");
+		list.add("Make some tea!");
 	}
 }
