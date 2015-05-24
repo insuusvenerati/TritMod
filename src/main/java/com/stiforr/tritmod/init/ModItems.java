@@ -28,7 +28,7 @@ public class ModItems
 	
 	// Items
 	public static final ItemTrit tritLeaf = new ItemTritLeaf();
-	public static final ItemTrit tritCup = new ItemTritCup();
+	public static final Item tritCup = new ItemTritCup();
 	public static final ItemTritTea tritTea = new ItemTritTea("tritTea", 4, 0.3F, false);
 	public static final ItemTrit tritIngot = new ItemTritIngot();
 	
