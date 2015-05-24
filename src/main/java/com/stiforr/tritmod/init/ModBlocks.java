@@ -1,5 +1,6 @@
 package com.stiforr.tritmod.init;
 
+import com.stiforr.tritmod.WorldGen;
 import com.stiforr.tritmod.block.BlockTrit;
 import com.stiforr.tritmod.block.BlockTritOre;
 import com.stiforr.tritmod.reference.Reference;
@@ -14,5 +15,6 @@ public class ModBlocks
 	public static void init()
 	{
 		GameRegistry.registerBlock(tritOre, "tritOre");
+		GameRegistry.registerWorldGenerator(new WorldGen(), 4);
 	}
 }

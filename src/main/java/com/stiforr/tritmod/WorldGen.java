@@ -2,6 +2,9 @@ package com.stiforr.tritmod;
 
 import java.util.Random;
 
+import com.stiforr.tritmod.block.BlockTritOre;
+import com.stiforr.tritmod.init.ModBlocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
@@ -13,8 +16,7 @@ public class WorldGen implements IWorldGenerator
 
 	{
 	
-	
-	
+		
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
 			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) 
@@ -46,7 +48,7 @@ public class WorldGen implements IWorldGenerator
 			int tritOreXCoord = i + random.nextInt(16);
 			int tritOreYCoord = random.nextInt(20);
 			int tritOreZCoord = j + random.nextInt(16);
-			WorldGenMinable(Block.tritOre, 0)).generate(world, random, firstBlockXCoord, firstBlockYCoord, firstBlockZCoord);
+			(new WorldGenMinable(ModBlocks.tritOre, 13)).generate(world, random, tritOreXCoord, tritOreYCoord, tritOreZCoord);
 		}
 		
 	}
