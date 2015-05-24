@@ -1,5 +1,7 @@
 package com.stiforr.tritmod.block;
 
+import com.stiforr.tritmod.creativetab.CreativeTabTrit;
+
 public class BlockTritOre extends BlockTrit
 {
 	public BlockTritOre()

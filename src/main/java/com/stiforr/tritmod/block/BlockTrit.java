@@ -1,5 +1,6 @@
 package com.stiforr.tritmod.block;
 
+import com.stiforr.tritmod.creativetab.CreativeTabTrit;
 import com.stiforr.tritmod.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -13,6 +14,7 @@ public class BlockTrit extends Block
 	public BlockTrit(Material material)
 	{
 		super(material);
+		this.setCreativeTab(CreativeTabTrit.Trit_Tab);
 	}
 	
 	public BlockTrit()

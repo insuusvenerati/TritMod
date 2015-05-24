@@ -1,5 +1,6 @@
 package com.stiforr.tritmod.item;
 
+import com.stiforr.tritmod.creativetab.CreativeTabTrit;
 import com.stiforr.tritmod.reference.Reference;
 
 import cpw.mods.fml.relauncher.Side;
@@ -13,6 +14,7 @@ public class ItemTrit extends Item
 	public ItemTrit()
 	{
 		super();
+		this.setCreativeTab(CreativeTabTrit.Trit_Tab);
 	}
 	
 	@Override

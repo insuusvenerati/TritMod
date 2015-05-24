@@ -2,6 +2,8 @@ package com.stiforr.tritmod.item;
 
 import java.util.List;
 
+import com.stiforr.tritmod.creativetab.CreativeTabTrit;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 
