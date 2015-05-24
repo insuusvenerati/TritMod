@@ -3,6 +3,7 @@ package com.stiforr.tritmod;
 import com.stiforr.tritmod.handler.ConfigHandler;
 import com.stiforr.tritmod.init.ModBlocks;
 import com.stiforr.tritmod.init.ModItems;
+import com.stiforr.tritmod.init.Recipes;
 import com.stiforr.tritmod.proxy.IProxy;
 import com.stiforr.tritmod.reference.Reference;
 import com.stiforr.tritmod.utility.LogHelper;
@@ -33,22 +34,29 @@ public class TritMod
 		// Create and load config file
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
-		LogHelper.info("Pre Init Complete");
 		// Register items
 		ModItems.init();
 		// Register blocks
 		ModBlocks.init();
+		
+		// Just some log stuff
+		LogHelper.info("Pre Init Complete");
 	}
 	
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+		// Register recipes obvs
+		Recipes.init();
+		
+		// Some log stuff
 		LogHelper.info("Init Complete");
 	}
 	
 	@Mod.EventHandler
 	public void postinit(FMLPostInitializationEvent event)
 	{
+		// Some log stuff
 		LogHelper.info("Post Init Complete");
 	}
 }

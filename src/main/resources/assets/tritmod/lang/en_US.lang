@@ -1,3 +1,18 @@
+// Tools
+item.tritAxe.name=Trit Axe
+item.tritHoe.name=Trit Hoe
+item.tritPickaxe.name=Trit Pickaxe
+item.tritShovel.name=Trit Shovel
+item.tritSword.name=Trit Sword
+
+// Food
 item.tritmod:tritLeaf.name=Trit Leaf
+item.tritTea.name=Trit Tea
+
+// Items
+item.tritmod:tritCup.name=Cup
+item.tritmod:tritIngot.name=Trit Ingot
 tile.tritmod:tritOre.name=Trit Ore
+
+// Creative Tabs
 itemGroup.tritmod=Trit Mod
