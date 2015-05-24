@@ -32,7 +32,7 @@ public class ItemTritTea extends ItemFood
 	@Override
 	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player)
 	{
-		super.onFoodEaten(ModItems.tritCup, world, player);
+		super.onEaten(itemstack, world, player);
 		return new ItemStack(ModItems.tritCup);
 		
 	}
