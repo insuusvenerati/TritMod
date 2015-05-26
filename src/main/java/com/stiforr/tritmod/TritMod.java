@@ -6,6 +6,7 @@ import net.minecraft.world.biome.BiomeGenBase;
 import com.stiforr.tritmod.biome.BiomeRegistry;
 import com.stiforr.tritmod.biome.TritBiomeTrit;
 import com.stiforr.tritmod.biome.WorldTypeTrit;
+import com.stiforr.tritmod.dimension.DimensionRegistry;
 import com.stiforr.tritmod.handler.ConfigHandler;
 import com.stiforr.tritmod.init.ModBlocks;
 import com.stiforr.tritmod.init.ModItems;
@@ -31,9 +32,7 @@ public class TritMod
 	@Mod.Instance(Reference.MOD_ID)
 	public static TritMod instance;
 	
-	// Biome
-	
-	
+		
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static IProxy proxy;
 	
@@ -48,9 +47,13 @@ public class TritMod
 		ModItems.init();
 		// Register blocks
 		ModBlocks.init();
+		ModBlocks.initBlocks();
 		
 		// Register Biome
 		BiomeRegistry.MainClass();
+		
+		// Register Dimension
+		DimensionRegistry.mainRegistry();
 		
 		// Just some log stuff
 		LogHelper.info("Pre Init Complete");
