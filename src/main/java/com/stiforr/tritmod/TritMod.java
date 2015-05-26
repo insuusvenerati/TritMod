@@ -1,5 +1,11 @@
 package com.stiforr.tritmod;
 
+import net.minecraft.world.WorldType;
+import net.minecraft.world.biome.BiomeGenBase;
+
+import com.stiforr.tritmod.biome.BiomeRegistry;
+import com.stiforr.tritmod.biome.TritBiomeTrit;
+import com.stiforr.tritmod.biome.WorldTypeTrit;
 import com.stiforr.tritmod.handler.ConfigHandler;
 import com.stiforr.tritmod.init.ModBlocks;
 import com.stiforr.tritmod.init.ModItems;
@@ -15,6 +21,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
@@ -23,6 +30,9 @@ public class TritMod
 	
 	@Mod.Instance(Reference.MOD_ID)
 	public static TritMod instance;
+	
+	// Biome
+	
 	
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
 	public static IProxy proxy;
@@ -39,6 +49,9 @@ public class TritMod
 		// Register blocks
 		ModBlocks.init();
 		
+		// Register Biome
+		BiomeRegistry.MainClass();
+		
 		// Just some log stuff
 		LogHelper.info("Pre Init Complete");
 	}
@@ -49,6 +62,9 @@ public class TritMod
 		// Register recipes obvs
 		Recipes.init();
 		
+		// Register Biome
+		
+		
 		// Some log stuff
 		LogHelper.info("Init Complete");
 	}
@@ -58,5 +74,11 @@ public class TritMod
 	{
 		// Some log stuff
 		LogHelper.info("Post Init Complete");
+		
+			WorldType TRIT = new WorldTypeTrit(3, "Trit");
+		
 	}
+	
+	 
+	
 }
