@@ -46,8 +46,9 @@ public class TritMod
 		// Register items
 		ModItems.init();
 		// Register blocks
-		ModBlocks.init();
 		ModBlocks.initBlocks();
+		ModBlocks.init();
+		
 		
 		// Register Biome
 		BiomeRegistry.MainClass();
