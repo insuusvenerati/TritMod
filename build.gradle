@@ -22,7 +22,7 @@ group= "com.stiforr.tritmod" // http://maven.apache.org/guides/mini/guide-naming
 archivesBaseName = "TritMod"
 
 minecraft {
-    version = "1.7.10-10.13.3.1355-1.7.10"
+    version = "1.7.10-10.13.3.1408-1.7.10"
     runDir = "eclipse"
 }
 
