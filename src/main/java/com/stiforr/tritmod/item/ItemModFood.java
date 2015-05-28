@@ -7,7 +7,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
-import com.stiforr.tritmod.TritMod;
 import com.stiforr.tritmod.reference.Reference;
 
 public class ItemModFood extends ItemFood 

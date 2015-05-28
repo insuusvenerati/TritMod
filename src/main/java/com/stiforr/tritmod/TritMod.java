@@ -1,10 +1,8 @@
 package com.stiforr.tritmod;
 
 import net.minecraft.world.WorldType;
-import net.minecraft.world.biome.BiomeGenBase;
 
 import com.stiforr.tritmod.biome.BiomeRegistry;
-import com.stiforr.tritmod.biome.TritBiomeTrit;
 import com.stiforr.tritmod.biome.WorldTypeTrit;
 import com.stiforr.tritmod.dimension.DimensionRegistry;
 import com.stiforr.tritmod.handler.ConfigHandler;
@@ -17,12 +15,10 @@ import com.stiforr.tritmod.utility.LogHelper;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 
 @Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)

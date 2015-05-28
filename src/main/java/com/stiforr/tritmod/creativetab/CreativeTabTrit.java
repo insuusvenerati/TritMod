@@ -1,10 +1,10 @@
 package com.stiforr.tritmod.creativetab;
 
-import com.stiforr.tritmod.init.ModItems;
-import com.stiforr.tritmod.reference.Reference;
-
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
+import com.stiforr.tritmod.init.ModItems;
+import com.stiforr.tritmod.reference.Reference;
 
 public class CreativeTabTrit 
 {

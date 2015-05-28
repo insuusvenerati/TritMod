@@ -1,10 +1,10 @@
 package com.stiforr.tritmod.dimension;
 
-import com.stiforr.tritmod.biome.BiomeRegistry;
-
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
+
+import com.stiforr.tritmod.biome.BiomeRegistry;
 
 public class WorldProviderTrit extends WorldProvider
 {

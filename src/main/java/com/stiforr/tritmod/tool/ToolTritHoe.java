@@ -1,9 +1,9 @@
 package com.stiforr.tritmod.tool;
 
+import net.minecraft.item.ItemHoe;
+
 import com.stiforr.tritmod.creativetab.CreativeTabTrit;
 import com.stiforr.tritmod.reference.Reference;
-
-import net.minecraft.item.ItemHoe;
 
 public class ToolTritHoe extends ItemHoe
 {

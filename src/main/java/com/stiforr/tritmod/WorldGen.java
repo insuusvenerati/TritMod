@@ -2,13 +2,12 @@ package com.stiforr.tritmod;
 
 import java.util.Random;
 
-import com.stiforr.tritmod.block.BlockTritOre;
-import com.stiforr.tritmod.init.ModBlocks;
-
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
+
+import com.stiforr.tritmod.init.ModBlocks;
+
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class WorldGen implements IWorldGenerator

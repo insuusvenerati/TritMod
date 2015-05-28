@@ -1,9 +1,9 @@
 package com.stiforr.tritmod.tool;
 
+import net.minecraft.item.ItemPickaxe;
+
 import com.stiforr.tritmod.creativetab.CreativeTabTrit;
 import com.stiforr.tritmod.reference.Reference;
-
-import net.minecraft.item.ItemPickaxe;
 
 public class ToolTritPickaxe extends ItemPickaxe
 {

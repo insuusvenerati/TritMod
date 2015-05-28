@@ -1,11 +1,12 @@
 package com.stiforr.tritmod.client.gui;
 
-import com.stiforr.tritmod.handler.ConfigHandler;
-import com.stiforr.tritmod.reference.Reference;
-
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraftforge.common.config.ConfigElement;
 import net.minecraftforge.common.config.Configuration;
+
+import com.stiforr.tritmod.handler.ConfigHandler;
+import com.stiforr.tritmod.reference.Reference;
+
 import cpw.mods.fml.client.config.GuiConfig;
 
 public class ModGuiConfig extends GuiConfig

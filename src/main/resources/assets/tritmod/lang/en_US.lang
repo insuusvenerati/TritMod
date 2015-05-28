@@ -16,3 +16,9 @@ tile.tritmod:tritOre.name=Trit Ore
 
 // Creative Tabs
 itemGroup.tritmod=Trit Mod
+
+// Armor 
+item.tritmod:tritHelmet.name=Trit Helmet
+item.tritmod:tritChest.name=Trit Chest
+item.tritmod:tritLegs.name=Trit Legs
+item.tritmod:tritBoots.name=Trit Boots
