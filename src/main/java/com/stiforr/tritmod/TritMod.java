@@ -79,9 +79,5 @@ public class TritMod
 		
 	}
 	
-	 public void test()
-	 {
-		 return;
-	 }
 	
 }
