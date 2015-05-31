@@ -1,8 +1,13 @@
 package com.stiforr.tritmod.init;
 
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.RenderItem;
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
 
 import com.stiforr.tritmod.armor.TritArmorBoots;
 import com.stiforr.tritmod.armor.TritArmorChest;
@@ -14,18 +19,19 @@ import com.stiforr.tritmod.item.ItemTritDust;
 import com.stiforr.tritmod.item.ItemTritIngot;
 import com.stiforr.tritmod.item.ItemTritLeaf;
 import com.stiforr.tritmod.item.ItemTritTea;
+import com.stiforr.tritmod.reference.Reference;
 import com.stiforr.tritmod.tool.ToolTritAxe;
 import com.stiforr.tritmod.tool.ToolTritHoe;
 import com.stiforr.tritmod.tool.ToolTritPickaxe;
 import com.stiforr.tritmod.tool.ToolTritShovel;
 import com.stiforr.tritmod.tool.ToolTritSword;
 
-import cpw.mods.fml.common.registry.GameRegistry;
-
 
 
 public class ModItems 
 {
+	
+	
 	
 	//Tool Materials
 	public static final Item.ToolMaterial tritToolMaterial = EnumHelper.addToolMaterial("tritToolMaterial", 3, 500, 7.0F, 2.0F, 14);
@@ -56,6 +62,7 @@ public class ModItems
 	
 	public static void init()
 	{
+		
 		GameRegistry.registerItem(tritLeaf, "tritLeaf");
 		GameRegistry.registerItem(tritCup, "tritCup");
 		GameRegistry.registerItem(tritTea, "tritTea");
@@ -73,5 +80,5 @@ public class ModItems
 		GameRegistry.registerItem(tritLegs, "tritLegs");
 		GameRegistry.registerItem(tritBoots, "tritBoots");
 	}
-			
+	
 }

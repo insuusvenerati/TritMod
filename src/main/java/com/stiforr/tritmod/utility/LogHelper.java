@@ -6,7 +6,7 @@ import org.apache.logging.log4j.Level;
 
 import com.stiforr.tritmod.reference.Reference;
 
-import cpw.mods.fml.common.FMLLog;
+import net.minecraftforge.fml.common.FMLLog;
 
 
 

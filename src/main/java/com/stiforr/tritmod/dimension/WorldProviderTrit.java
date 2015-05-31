@@ -25,5 +25,11 @@ public class WorldProviderTrit extends WorldProvider
 		
 		return "Trit";
 	}
+
+	@Override
+	public String getInternalNameSuffix() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

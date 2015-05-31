@@ -8,7 +8,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 
 import com.stiforr.tritmod.init.ModBlocks;
 
-import cpw.mods.fml.common.IWorldGenerator;
+import net.minecraftforge.fml.common.IWorldGenerator;
 
 public class WorldGen implements IWorldGenerator
 

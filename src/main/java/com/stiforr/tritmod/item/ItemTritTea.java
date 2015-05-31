@@ -13,26 +13,33 @@ import com.stiforr.tritmod.reference.Reference;
 public class ItemTritTea extends ItemFood
 {
 
+	private final String name = "tritTea";
+	
 	public ItemTritTea(String unlocalizedName, int healAmount, float saturationModifier, boolean wolvesFavorite) 
 	{
 		super(healAmount, saturationModifier, wolvesFavorite);
 		this.setUnlocalizedName("tritTea");
 		this.setCreativeTab(CreativeTabTrit.Trit_Tab);
-		this.setTextureName(Reference.MOD_ID + ":" + "tritTea");
+		
 		this.setMaxStackSize(5);
 		
 	}
 	
 	public EnumAction getItemUseAction(ItemStack itemstack)
 	{
-		return EnumAction.drink;
+		return EnumAction.DRINK;
 	}
 	
-	@Override
 	public ItemStack onEaten(ItemStack itemstack, World world, EntityPlayer player)
 	{
-		super.onEaten(itemstack, world, player);
+		super.onFoodEaten(itemstack, world, player);
 		return new ItemStack(ModItems.tritCup);
 		
 	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
 }

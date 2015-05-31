@@ -7,7 +7,7 @@ import com.stiforr.tritmod.block.BlockTrit;
 import com.stiforr.tritmod.block.BlockTritOre;
 import com.stiforr.tritmod.reference.Reference;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModBlocks 
