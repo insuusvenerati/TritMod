@@ -12,7 +12,11 @@ item.tritTea.name=Trit Tea
 // Items
 item.tritmod:tritCup.name=Cup
 item.tritmod:tritIngot.name=Trit Ingot
+
+// Blocks
 tile.tritmod:tritOre.name=Trit Ore
+tile.tritmod:tritIngotBlock.name=Trit Block
+
 
 // Creative Tabs
 itemGroup.tritmod=Trit Mod

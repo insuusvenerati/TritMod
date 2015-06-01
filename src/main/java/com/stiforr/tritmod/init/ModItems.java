@@ -40,6 +40,7 @@ public class ModItems
 	public static final ItemTrit tritIngot = new ItemTritIngot();
 	public static final ItemTrit tritDust = new ItemTritDust();
 	
+	
 	// Armor
 	public static Item tritHelmet = new TritArmorHelmet(tritArmorMaterial, 0, "tritHelmet");
 	public static Item tritChest = new TritArmorChest(tritArmorMaterial, 1, "tritChest");
@@ -66,6 +67,7 @@ public class ModItems
 		GameRegistry.registerItem(tritShovel, "tritShovel");
 		GameRegistry.registerItem(tritHoe, "tritHoe");
 		GameRegistry.registerItem(tritDust, "tritDust");
+		
 		
 		// Register Armor
 		GameRegistry.registerItem(tritHelmet, "tritHelmet");

@@ -9,6 +9,14 @@ public class Recipes
 	public static void init()
 	{
 		
+		// Block Recipes
+		GameRegistry.addRecipe(new ItemStack(ModBlocks.tritIngotBlock),
+														"iii",			
+														"iii",
+														"iii",
+														'i', new ItemStack(ModItems.tritIngot));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tritIngot, 9), new ItemStack(ModBlocks.tritIngotBlock));
+		
 		// Item Recipes
 		GameRegistry.addRecipe(new ItemStack(ModItems.tritCup), "   ", "s s", " s ", 's', new ItemStack(Items.stick));
 		
