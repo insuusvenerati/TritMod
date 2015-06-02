@@ -2,7 +2,7 @@ package com.stiforr.tritmod.init;
 
 import net.minecraft.block.Block;
 
-import com.stiforr.tritmod.WorldGen;
+import com.stiforr.tritmod.biome.WorldGen;
 import com.stiforr.tritmod.block.BlockTrit;
 import com.stiforr.tritmod.block.BlockTritOre;
 import com.stiforr.tritmod.item.ItemTritIngotBlock;

@@ -3,6 +3,7 @@ package com.stiforr.tritmod;
 import net.minecraft.world.WorldType;
 
 import com.stiforr.tritmod.biome.BiomeRegistry;
+import com.stiforr.tritmod.biome.WorldGen;
 import com.stiforr.tritmod.biome.WorldTypeTrit;
 import com.stiforr.tritmod.dimension.DimensionRegistry;
 import com.stiforr.tritmod.handler.ConfigHandler;
@@ -44,6 +45,8 @@ public class TritMod
 		// Register blocks
 		ModBlocks.initBlocks();
 		ModBlocks.init();
+		// Register WorldGen
+		WorldGen.init();
 		
 		
 		// Register Biome

@@ -1,4 +1,4 @@
-package com.stiforr.tritmod;
+package com.stiforr.tritmod.biome;
 
 import java.util.Random;
 
@@ -9,6 +9,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import com.stiforr.tritmod.init.ModBlocks;
 
 import cpw.mods.fml.common.IWorldGenerator;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class WorldGen implements IWorldGenerator
 
@@ -56,6 +57,11 @@ public class WorldGen implements IWorldGenerator
 	{
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public static void init()
+	{
+		GameRegistry.registerWorldGenerator(new WorldGen(), 4);
 	}
 
 }
