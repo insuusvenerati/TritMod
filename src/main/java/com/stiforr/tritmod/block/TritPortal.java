@@ -1,4 +1,4 @@
-package com.stiforr.tritmod.init;
+package com.stiforr.tritmod.block;
 
 import java.util.Random;
 
@@ -13,6 +13,8 @@ import net.minecraft.world.World;
 
 import com.stiforr.tritmod.creativetab.CreativeTabTrit;
 import com.stiforr.tritmod.dimension.DimensionRegistry;
+import com.stiforr.tritmod.dimension.TeleporterTrit;
+import com.stiforr.tritmod.init.ModBlocks;
 
 public class TritPortal extends BlockPortal 
 {

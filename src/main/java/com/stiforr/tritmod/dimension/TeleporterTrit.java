@@ -1,8 +1,10 @@
-package com.stiforr.tritmod.init;
+package com.stiforr.tritmod.dimension;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+import com.stiforr.tritmod.init.ModBlocks;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.init.Blocks;

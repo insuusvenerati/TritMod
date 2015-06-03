@@ -2,7 +2,7 @@ package com.stiforr.tritmod.proxy;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
 
-public class ClientProxy extends CommonProxy
+public class ClientProxy extends ServerProxy
 {
 	public void registerRenderInfo()
 	{
