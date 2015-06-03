@@ -10,6 +10,7 @@ import com.stiforr.tritmod.block.TritPortal;
 import com.stiforr.tritmod.creativetab.CreativeTabTrit;
 import com.stiforr.tritmod.item.ItemTritIngotBlock;
 import com.stiforr.tritmod.reference.Reference;
+import com.stiforr.tritmod.tileentity.TritChest;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -21,6 +22,7 @@ public class ModBlocks
 	public static Block tritIngotBlock = new ItemTritIngotBlock().setHardness(5.0F).setResistance(10.0F);
 	public static Block tritFurnace;
 	public static Block tritFurnaceActive;
+	public static Block tritChest;
 	
 	
 	
@@ -32,6 +34,7 @@ public class ModBlocks
 		GameRegistry.registerBlock(tritIngotBlock, "tritBlock");
 		GameRegistry.registerBlock(tritFurnace, "tritFurnace");
 		GameRegistry.registerBlock(tritFurnaceActive, "tritFurnaceActive");
+		GameRegistry.registerBlock(tritChest, tritChest.getUnlocalizedName());
 		
 		
 		
@@ -42,7 +45,7 @@ public class ModBlocks
 		tritPortal = new TritPortal();
 		tritFurnace = new TritFurnace(false).setBlockName("TritFurnace").setCreativeTab(CreativeTabTrit.Trit_Tab);
 		tritFurnaceActive = new TritFurnace(true).setBlockName("TritFurnaceActive");
-		
+		tritChest = new TritChest(0).setBlockName("tritChest").setCreativeTab(CreativeTabTrit.Trit_Tab).setBlockTextureName(Reference.MOD_ID + ":" + "tritChest");
 		
 		
 	}

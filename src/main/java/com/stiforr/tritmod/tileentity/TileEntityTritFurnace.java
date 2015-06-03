@@ -34,7 +34,6 @@ public class TileEntityTritFurnace extends TileEntity implements ISidedInventory
 	
 	public int furnaceBurnTime;
 	public int currentBurnTime;
-	
 	public int furnaceCookTime;
 	
 	private String furnaceName;

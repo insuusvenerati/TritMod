@@ -4,16 +4,16 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraftforge.common.util.EnumHelper;
 
-import com.stiforr.tritmod.armor.TritArmorBoots;
-import com.stiforr.tritmod.armor.TritArmorChest;
-import com.stiforr.tritmod.armor.TritArmorHelmet;
-import com.stiforr.tritmod.armor.TritArmorLegs;
+import com.stiforr.tritmod.TritMod;
+import com.stiforr.tritmod.armor.TritArmor;
+import com.stiforr.tritmod.creativetab.CreativeTabTrit;
 import com.stiforr.tritmod.item.ItemTrit;
 import com.stiforr.tritmod.item.ItemTritCup;
 import com.stiforr.tritmod.item.ItemTritDust;
 import com.stiforr.tritmod.item.ItemTritIngot;
 import com.stiforr.tritmod.item.ItemTritLeaf;
 import com.stiforr.tritmod.item.ItemTritTea;
+import com.stiforr.tritmod.reference.Reference;
 import com.stiforr.tritmod.tool.ToolTritAxe;
 import com.stiforr.tritmod.tool.ToolTritHoe;
 import com.stiforr.tritmod.tool.ToolTritPickaxe;
@@ -42,10 +42,10 @@ public class ModItems
 	
 	
 	// Armor
-	public static Item tritHelmet = new TritArmorHelmet(tritArmorMaterial, 0, "tritHelmet");
-	public static Item tritChest = new TritArmorChest(tritArmorMaterial, 1, "tritChest");
-	public static Item tritLegs = new TritArmorLegs(tritArmorMaterial, 2, "tritLegs");
-	public static Item tritBoots = new TritArmorBoots(tritArmorMaterial, 3, "tritBoots");
+	public static Item tritHelmet = new TritArmor(tritArmorMaterial, TritMod.proxy.addArmor("tritArmor"), 0).setUnlocalizedName("tritHelmet").setCreativeTab(CreativeTabTrit.Trit_Tab).setTextureName(Reference.MOD_ID + ":tritHelmet");
+	public static Item tritArmorChest = new TritArmor(tritArmorMaterial, TritMod.proxy.addArmor("tritArmor"), 1).setUnlocalizedName("tritArmorChest").setCreativeTab(CreativeTabTrit.Trit_Tab).setTextureName(Reference.MOD_ID + ":tritArmorChest");
+	public static Item tritLegs = new TritArmor(tritArmorMaterial, TritMod.proxy.addArmor("tritArmor"), 2).setUnlocalizedName("tritLegs").setCreativeTab(CreativeTabTrit.Trit_Tab).setTextureName(Reference.MOD_ID + ":tritLegs");
+	public static Item tritBoots = new TritArmor(tritArmorMaterial, TritMod.proxy.addArmor("tritArmor"), 3).setUnlocalizedName("tritBoots").setCreativeTab(CreativeTabTrit.Trit_Tab).setTextureName(Reference.MOD_ID + ":tritBoots");
 	
 	// Tools
 	public static final ToolTritPickaxe tritPickaxe = new ToolTritPickaxe(tritToolMaterial);
@@ -71,7 +71,7 @@ public class ModItems
 		
 		// Register Armor
 		GameRegistry.registerItem(tritHelmet, "tritHelmet");
-		GameRegistry.registerItem(tritChest, "tritChest");
+		GameRegistry.registerItem(tritArmorChest, "tritArmorChest");
 		GameRegistry.registerItem(tritLegs, "tritLegs");
 		GameRegistry.registerItem(tritBoots, "tritBoots");
 	}

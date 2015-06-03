@@ -12,6 +12,7 @@ import com.stiforr.tritmod.init.ModItems;
 import com.stiforr.tritmod.init.Recipes;
 import com.stiforr.tritmod.proxy.ServerProxy;
 import com.stiforr.tritmod.reference.Reference;
+import com.stiforr.tritmod.tileentity.TritTileEntity;
 import com.stiforr.tritmod.utility.LogHelper;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -43,6 +44,8 @@ public class TritMod
 		// Register items
 		ModItems.init();
 		// Register blocks
+		proxy.registerRenderInfo();
+		TritTileEntity.mainRegistry();
 		ModBlocks.initBlocks();
 		ModBlocks.init();
 		// Register WorldGen
@@ -84,6 +87,5 @@ public class TritMod
 			WorldType TRIT = new WorldTypeTrit(3, "Trit");
 		
 	}
-	
 	
 }

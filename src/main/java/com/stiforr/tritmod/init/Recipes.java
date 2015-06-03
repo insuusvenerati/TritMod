@@ -41,7 +41,7 @@ public class Recipes
 														"i i",
 														'i', new ItemStack(ModItems.tritIngot));
 		
-		GameRegistry.addRecipe(new ItemStack(ModItems.tritChest), 
+		GameRegistry.addRecipe(new ItemStack(ModItems.tritArmorChest), 
 														"i i",
 														"iii",
 														"iii",
