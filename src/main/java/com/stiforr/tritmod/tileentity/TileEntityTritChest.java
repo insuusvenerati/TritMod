@@ -24,7 +24,7 @@ public class TileEntityTritChest extends TileEntityChest
     
     public String getInventoryName()
     {
-        return this.hasCustomInventoryName() ? this.customName : "container.chest";
+        return this.hasCustomInventoryName() ? this.customName : "Trit Chest";
     }
     
     
@@ -36,20 +36,20 @@ public class TileEntityTritChest extends TileEntityChest
         return this.customName != null && this.customName.length() > 0;
     }
 
-    public void func_145976_a(String p_145976_1_)
+    public void func_145976_a(String string)
     {
-        this.customName = p_145976_1_;
+        this.customName = string;
     }
     
-    public void readFromNBT(NBTTagCompound p_145839_1_)
+    public void readFromNBT(NBTTagCompound tagCompound)
     {
-        super.readFromNBT(p_145839_1_);
-        NBTTagList nbttaglist = p_145839_1_.getTagList("Items", 10);
+        super.readFromNBT(tagCompound);
+        NBTTagList nbttaglist = tagCompound.getTagList("Items", 10);
         this.chestContents = new ItemStack[this.getSizeInventory()];
 
-        if (p_145839_1_.hasKey("CustomName", 8))
+        if (tagCompound.hasKey("Trit Chest", 8))
         {
-            this.customName = p_145839_1_.getString("CustomName");
+            this.customName = tagCompound.getString("Trit Chest");
         }
 
         for (int i = 0; i < nbttaglist.tagCount(); ++i)
@@ -64,9 +64,9 @@ public class TileEntityTritChest extends TileEntityChest
         }
     }
     
-    public void writeToNBT(NBTTagCompound p_145841_1_)
+    public void writeToNBT(NBTTagCompound tagCompound)
     {
-        super.writeToNBT(p_145841_1_);
+        super.writeToNBT(tagCompound);
         NBTTagList nbttaglist = new NBTTagList();
 
         for (int i = 0; i < this.chestContents.length; ++i)
@@ -80,17 +80,23 @@ public class TileEntityTritChest extends TileEntityChest
             }
         }
 
-        p_145841_1_.setTag("Items", nbttaglist);
+        tagCompound.setTag("Items", nbttaglist);
 
         if (this.hasCustomInventoryName())
         {
-            p_145841_1_.setString("CustomName", this.customName);
+            tagCompound.setString("Trit Chest", this.customName);
         }
     }
     
-    private void func_145978_a(TileEntityTritChest p_145978_1_, int p_145978_2_)
+    public void updateContainingBlockInfo()
     {
-        if (p_145978_1_.isInvalid())
+        super.updateContainingBlockInfo();
+        this.adjacentChestChecked = false;
+    }
+    
+    private void func_145978_a(TileEntityTritChest tEntity, int p_145978_2_)
+    {
+        if (tEntity.isInvalid())
         {
             this.adjacentChestChecked = false;
         }
@@ -99,28 +105,28 @@ public class TileEntityTritChest extends TileEntityChest
             switch (p_145978_2_)
             {
                 case 0:
-                    if (this.adjacentChestZPos != p_145978_1_)
+                    if (this.adjacentChestZPos != tEntity)
                     {
                         this.adjacentChestChecked = false;
                     }
 
                     break;
                 case 1:
-                    if (this.adjacentChestXNeg != p_145978_1_)
+                    if (this.adjacentChestXNeg != tEntity)
                     {
                         this.adjacentChestChecked = false;
                     }
 
                     break;
                 case 2:
-                    if (this.adjacentChestZNeg != p_145978_1_)
+                    if (this.adjacentChestZNeg != tEntity)
                     {
                         this.adjacentChestChecked = false;
                     }
 
                     break;
                 case 3:
-                    if (this.adjacentChestXPos != p_145978_1_)
+                    if (this.adjacentChestXPos != tEntity)
                     {
                         this.adjacentChestChecked = false;
                     }
@@ -180,7 +186,7 @@ public class TileEntityTritChest extends TileEntityChest
         }
     }
 
-    private boolean func_145977_a(int p_145977_1_, int p_145977_2_, int p_145977_3_)
+    private boolean func_145977_a(int x, int y, int z)
     {
         if (this.worldObj == null)
         {
@@ -188,7 +194,7 @@ public class TileEntityTritChest extends TileEntityChest
         }
         else
         {
-            Block block = this.worldObj.getBlock(p_145977_1_, p_145977_2_, p_145977_3_);
+            Block block = this.worldObj.getBlock(x, y, z);
             return block instanceof TritChest && ((TritChest)block).field_149956_a == this.func_145980_j();
         }
     }

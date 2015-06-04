@@ -160,58 +160,58 @@ public class TritChest extends BlockChest {
         super.breakBlock(p_149749_1_, p_149749_2_, p_149749_3_, p_149749_4_, p_149749_5_, p_149749_6_);
     }
 	
-	public IInventory func_149951_m(World p_149951_1_, int p_149951_2_, int p_149951_3_, int p_149951_4_)
+	public IInventory func_149951_m(World world, int x, int y, int z)
     {
-        Object object = (TileEntityTritChest)p_149951_1_.getTileEntity(p_149951_2_, p_149951_3_, p_149951_4_);
+        Object object = (TileEntityTritChest)world.getTileEntity(x, y, z);
 
         if (object == null)
         {
             return null;
         }
-        else if (p_149951_1_.isSideSolid(p_149951_2_, p_149951_3_ + 1, p_149951_4_, DOWN))
+        else if (world.isSideSolid(x, y + 1, z, DOWN))
         {
             return null;
         }
-        else if (func_149953_o(p_149951_1_, p_149951_2_, p_149951_3_, p_149951_4_))
+        else if (func_149953_o(world, x, y, z))
         {
             return null;
         }
-        else if (p_149951_1_.getBlock(p_149951_2_ - 1, p_149951_3_, p_149951_4_) == this && (p_149951_1_.isSideSolid(p_149951_2_ - 1, p_149951_3_ + 1, p_149951_4_, DOWN) || func_149953_o(p_149951_1_, p_149951_2_ - 1, p_149951_3_, p_149951_4_)))
+        else if (world.getBlock(x - 1, y, z) == this && (world.isSideSolid(x - 1, y + 1, z, DOWN) || func_149953_o(world, x - 1, y, z)))
         {
             return null;
         }
-        else if (p_149951_1_.getBlock(p_149951_2_ + 1, p_149951_3_, p_149951_4_) == this && (p_149951_1_.isSideSolid(p_149951_2_ + 1, p_149951_3_ + 1, p_149951_4_, DOWN) || func_149953_o(p_149951_1_, p_149951_2_ + 1, p_149951_3_, p_149951_4_)))
+        else if (world.getBlock(x + 1, y, z) == this && (world.isSideSolid(x + 1, y + 1, z, DOWN) || func_149953_o(world, x + 1, y, z)))
         {
             return null;
         }
-        else if (p_149951_1_.getBlock(p_149951_2_, p_149951_3_, p_149951_4_ - 1) == this && (p_149951_1_.isSideSolid(p_149951_2_, p_149951_3_ + 1, p_149951_4_ - 1, DOWN) || func_149953_o(p_149951_1_, p_149951_2_, p_149951_3_, p_149951_4_ - 1)))
+        else if (world.getBlock(x, y, z - 1) == this && (world.isSideSolid(x, y + 1, z - 1, DOWN) || func_149953_o(world, x, y, z - 1)))
         {
             return null;
         }
-        else if (p_149951_1_.getBlock(p_149951_2_, p_149951_3_, p_149951_4_ + 1) == this && (p_149951_1_.isSideSolid(p_149951_2_, p_149951_3_ + 1, p_149951_4_ + 1, DOWN) || func_149953_o(p_149951_1_, p_149951_2_, p_149951_3_, p_149951_4_ + 1)))
+        else if (world.getBlock(x, y, z + 1) == this && (world.isSideSolid(x, y + 1, z + 1, DOWN) || func_149953_o(world, x, y, z + 1)))
         {
             return null;
         }
         else
         {
-            if (p_149951_1_.getBlock(p_149951_2_ - 1, p_149951_3_, p_149951_4_) == this)
+            if (world.getBlock(x - 1, y, z) == this)
             {
-                object = new InventoryLargeChest("Large Trit Chest", (TileEntityTritChest)p_149951_1_.getTileEntity(p_149951_2_ - 1, p_149951_3_, p_149951_4_), (IInventory)object);
+                object = new InventoryLargeChest("Large Trit Chest", (TileEntityTritChest)world.getTileEntity(x - 1, y, z), (IInventory)object);
             }
 
-            if (p_149951_1_.getBlock(p_149951_2_ + 1, p_149951_3_, p_149951_4_) == this)
+            if (world.getBlock(x + 1, y, z) == this)
             {
-                object = new InventoryLargeChest("Large Trit Chest", (IInventory)object, (TileEntityTritChest)p_149951_1_.getTileEntity(p_149951_2_ + 1, p_149951_3_, p_149951_4_));
+                object = new InventoryLargeChest("Large Trit Chest", (IInventory)object, (TileEntityTritChest)world.getTileEntity(x + 1, y, z));
             }
 
-            if (p_149951_1_.getBlock(p_149951_2_, p_149951_3_, p_149951_4_ - 1) == this)
+            if (world.getBlock(x, y, z - 1) == this)
             {
-                object = new InventoryLargeChest("Large Trit Chest", (TileEntityTritChest)p_149951_1_.getTileEntity(p_149951_2_, p_149951_3_, p_149951_4_ - 1), (IInventory)object);
+                object = new InventoryLargeChest("Large Trit Chest", (TileEntityTritChest)world.getTileEntity(x, y, z - 1), (IInventory)object);
             }
 
-            if (p_149951_1_.getBlock(p_149951_2_, p_149951_3_, p_149951_4_ + 1) == this)
+            if (world.getBlock(x, y, z + 1) == this)
             {
-                object = new InventoryLargeChest("Large Trit Chest", (IInventory)object, (TileEntityTritChest)p_149951_1_.getTileEntity(p_149951_2_, p_149951_3_, p_149951_4_ + 1));
+                object = new InventoryLargeChest("Large Trit Chest", (IInventory)object, (TileEntityTritChest)world.getTileEntity(x, y, z + 1));
             }
 
             return (IInventory)object;
@@ -247,6 +247,6 @@ public class TritChest extends BlockChest {
 	@SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister p_149651_1_)
     {
-        this.blockIcon = p_149651_1_.registerIcon(Reference.MOD_ID + ":TritChest");
+        this.blockIcon = p_149651_1_.registerIcon(Reference.MOD_ID + ":tritChest");
     }
 }
