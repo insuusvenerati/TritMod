@@ -41,23 +41,30 @@ public class TritMod
 		// Create and load config file
 		ConfigHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
+		LogHelper.info("Config Loaded");
 		// Register items
 		ModItems.init();
+		LogHelper.info("Items Registered");
 		// Register blocks
 		proxy.registerRenderInfo();
 		TritTileEntity.mainRegistry();
 		ModBlocks.initBlocks();
 		ModBlocks.init();
+		LogHelper.info("Blocks Registered");
 		// Register WorldGen
 		WorldGen.init();
+		LogHelper.info("WorldGen Registered");
 		// Register Tile Entities
 		proxy.registerTileEntities();
+		LogHelper.info("Tile Entities Registered");
 		
 		// Register Biome
 		BiomeRegistry.MainClass();
+		LogHelper.info("Biomes Registered");
 		
 		// Register Dimension
 		DimensionRegistry.mainRegistry();
+		LogHelper.info("Dimensions Registered");
 		
 		// Just some log stuff
 		LogHelper.info("Pre Init Complete");
@@ -68,6 +75,7 @@ public class TritMod
 	{
 		// Register recipes obvs
 		Recipes.init();
+		LogHelper.info("Recipes Registered");
 		
 		proxy.registerNetworkStuff();
 		
@@ -84,7 +92,7 @@ public class TritMod
 		// Some log stuff
 		LogHelper.info("Post Init Complete");
 		
-			WorldType TRIT = new WorldTypeTrit(3, "Trit");
+		WorldType TRIT = new WorldTypeTrit(3, "Trit");
 		
 	}
 	
