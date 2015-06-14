@@ -10,7 +10,7 @@ import com.stiforr.tritmod.handler.ConfigHandler;
 import com.stiforr.tritmod.init.ModBlocks;
 import com.stiforr.tritmod.init.ModItems;
 import com.stiforr.tritmod.init.Recipes;
-import com.stiforr.tritmod.proxy.ServerProxy;
+import com.stiforr.tritmod.proxy.CommonProxy;
 import com.stiforr.tritmod.reference.Reference;
 import com.stiforr.tritmod.tileentity.TritTileEntity;
 import com.stiforr.tritmod.utility.LogHelper;
@@ -32,7 +32,7 @@ public class TritMod
 	
 		
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
-	public static ServerProxy proxy;
+	public static CommonProxy proxy;
 	
 	// Starting Init stuff
 	@Mod.EventHandler
@@ -56,6 +56,10 @@ public class TritMod
 		
 		// Register Tile Entities
 		proxy.registerTileEntities();
+		
+		// Register Entities
+		proxy.registerRenderers();
+		proxy.registerEntities();
 		
 		
 		// Register Biome

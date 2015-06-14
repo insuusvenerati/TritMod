@@ -7,6 +7,7 @@ import net.minecraftforge.common.util.EnumHelper;
 import com.stiforr.tritmod.TritMod;
 import com.stiforr.tritmod.armor.TritArmor;
 import com.stiforr.tritmod.creativetab.CreativeTabTrit;
+import com.stiforr.tritmod.item.FoodTrit;
 import com.stiforr.tritmod.item.ItemTrit;
 import com.stiforr.tritmod.item.ItemTritCup;
 import com.stiforr.tritmod.item.ItemTritDust;
@@ -35,8 +36,8 @@ public class ModItems
 	
 	// Items
 	public static final ItemTrit tritLeaf = new ItemTritLeaf();
-	public static final Item tritCup = new ItemTritCup();
-	public static final ItemTritTea tritTea = new ItemTritTea("tritTea", 4, 0.3F, false);
+	public static final ItemTrit tritCup = new ItemTritCup();
+	public static final FoodTrit tritTea = new ItemTritTea("tritTea", 4, 0.3F, false);
 	public static final ItemTrit tritIngot = new ItemTritIngot();
 	public static final ItemTrit tritDust = new ItemTritDust();
 	

@@ -14,8 +14,8 @@ import com.stiforr.tritmod.reference.Reference;
 
 public class TritArmor extends ItemArmor {
 
-	public TritArmor(ArmorMaterial p_i45325_1_, int p_i45325_2_, int p_i45325_3_) {
-		super(p_i45325_1_, p_i45325_2_, p_i45325_3_);
+	public TritArmor(ArmorMaterial material, int dmgReduc, int enchantability) {
+		super(material, dmgReduc, enchantability);
 		// TODO Auto-generated constructor stub
 	}
 
